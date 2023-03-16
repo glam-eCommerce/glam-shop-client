@@ -1,9 +1,5 @@
 version: 0.2
 
-env:
-  parameter-store:
-
-
 phases:
   install:
     runtime-versions:
@@ -17,8 +13,6 @@ phases:
       - echo Installing some packages and source NPM dependencies...
       - wget https://s3.amazonaws.com/rds-downloads/rds-combined-ca-bundle.pem
       - echo "creating environment variable"
-      - touch .env
-      - 
       - npm install
     finally:
       - echo Pre-build phase finished  on `date` 
