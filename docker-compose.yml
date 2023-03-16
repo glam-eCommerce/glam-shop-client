@@ -3,7 +3,7 @@ version: '3'
 services:
   web:
     container_name: glam-client
-    build:
+    build: 
       context: .
       dockerfile: Dockerfile
     volumes:
@@ -11,5 +11,6 @@ services:
       - '/app/node_modules'
     ports:
       - 3000:80
+    restart: always
     environment:
-      - REACT_APP_API_URL=http://127.0.0.1:8000
+      - REACT_APP_API_URL=http://host.docker.internal:8000
