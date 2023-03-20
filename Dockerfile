@@ -13,7 +13,7 @@ COPY . .
 RUN npm install
 
 # Set Environment variable
-ENV REACT_APP_API_URL=http://host.docker.internal:8000
+# ENV REACT_APP_API_URL=http://host.docker.internal:8000
 
 # Build the app
 RUN npm run build
