@@ -32,7 +32,6 @@ RUN npm run build
 # Bundle static assets with nginx
 FROM nginx:1.23.1-alpine as production
 
-
 # Copy built assets from `builder` image
 COPY --from=builder /app/build /usr/share/nginx/html
 
