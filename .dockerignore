@@ -6,3 +6,4 @@ Dockerfile.prod
 old
 .git
 *.log
+build

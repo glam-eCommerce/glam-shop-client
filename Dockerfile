@@ -5,7 +5,7 @@ FROM node:16-alpine as builder
 WORKDIR /app
 
 # Copy app files
-COPY . .
+COPY . /app
 
 # Install dependencies
 RUN npm install
