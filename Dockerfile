@@ -43,5 +43,4 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 EXPOSE 80
 
 # Start nginx
-# CMD ["nginx", "-g", "daemon off;"]
-CMD ["/bin/sh", "-c", "export REACT_APP_API_URL=$REACT_APP_API_URL && envsubst < nginx.conf > /etc/nginx/nginx.conf && exec nginx -g 'daemon off;'"]
+CMD ["nginx", "-g", "daemon off;"]
