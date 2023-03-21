@@ -29,7 +29,7 @@ RUN npm run build
 # CMD [ "npm", "start"]
 
 # ==== RUN WITH NGINX =======
-Bundle static assets with nginx
+# Bundle static assets with nginx
 FROM nginx:1.23.1-alpine as production
 
 # Copy built assets from `builder` image
