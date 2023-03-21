@@ -5,9 +5,7 @@ FROM node:16-alpine as builder
 WORKDIR /app
 
 # Copy app files
-COPY package*.json ./
-COPY public ./public
-COPY src ./src
+COPY . .
 
 # Install dependencies
 RUN npm install
