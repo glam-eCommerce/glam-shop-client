@@ -5,7 +5,9 @@ FROM node:16-alpine as builder
 WORKDIR /app
 
 # Copy app files
-COPY . .
+COPY package*.json ./
+COPY public ./public
+COPY src ./src
 
 # Install dependencies
 RUN npm install
@@ -13,8 +15,14 @@ RUN npm install
 # Build the app
 RUN npm run build
 
-# Expose the port on which the app will be running (3000 is the default that `http-server` uses)
-EXPOSE 3000
+# Run the app
+FROM node:16-alpine as production
+
+# Copy built assets from `builder` image
+COPY --from=builder /app/build /app/build
+
+# Expose port 80
+EXPOSE 80
 
 # Start the app on port 80
-CMD ["npx", "http-server", "build"]
+CMD ["npx", "serve", "-s", "-l", "80", "build"]
