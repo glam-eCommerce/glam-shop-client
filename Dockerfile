@@ -17,4 +17,4 @@ RUN npm run build
 EXPOSE 80
 
 # Start the app on port 80
-CMD ["serve", "s", "build", "-l", "80"]
+CMD ["npx", "serve", "s", "build", "-l", "80"]
