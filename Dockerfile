@@ -14,6 +14,9 @@ RUN npm install
 # Build the app
 RUN npm run build
 
+# Copy build files to /app
+COPY build /app/build
+
 # Expose port 80
 EXPOSE 80
 
