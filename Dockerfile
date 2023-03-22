@@ -35,6 +35,9 @@ FROM nginx:1.23.1-alpine as production
 # Copy built assets from `builder` image
 COPY --from=builder /app/build /usr/share/nginx/html
 
+# Copy environment variables
+COPY --from=builder /app/.env /usr/share/nginx/html/.env
+
 # Add your nginx.conf
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
