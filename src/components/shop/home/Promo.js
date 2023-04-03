@@ -1,4 +1,3 @@
-
 const Promo = ({promo}) => {
   
   return <div class="promo">{promo}</div>;
