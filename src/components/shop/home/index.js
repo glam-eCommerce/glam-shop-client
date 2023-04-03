@@ -1,10 +1,11 @@
-import React, { Fragment, createContext, useReducer, useEffect } from "react";
+import React, { Fragment, createContext, useReducer, useEffect, useState } from "react";
 import Layout from "../layout";
 import Slider from "./Slider";
 import ProductCategory from "./ProductCategory";
 import { homeState, homeReducer } from "./HomeContext";
 import SingleProduct from "./SingleProduct";
 import Promo from "./Promo";
+import axios from "axios";
 const apiURL = process.env.REACT_APP_API_URL;
 
 export const HomeContext = createContext();

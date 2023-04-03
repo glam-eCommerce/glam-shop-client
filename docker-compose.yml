@@ -8,8 +8,6 @@ services:
       dockerfile: Dockerfile
       args:
         - REACT_APP_API_URL=$REACT_APP_API_URL
-        - REDIS_HOST=$REDIS_HOST
-        - REDIS_PORT=$REDIS_PORT
     ports:
       - 80:80
     restart: always
