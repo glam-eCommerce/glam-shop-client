@@ -10,6 +10,7 @@ export const HomeContext = createContext();
 const HomeComponent = () => {
   return (
     <Fragment>
+      <Promo/>
       <Slider />
       {/* Category, Search & Filter Section */}
       <section className="m-4 md:mx-8 md:my-6">

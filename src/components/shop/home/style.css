@@ -8,6 +8,20 @@
   transition: opacity 0.2s;
 }
 
+// create a small promo banner
+.promo{
+  background-color: #b7791f;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 999;
+}
+
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
