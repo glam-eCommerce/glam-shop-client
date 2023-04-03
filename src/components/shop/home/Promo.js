@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
+import redis from "redis";
 
 const Promo = () => {
   const [promo, setPromo] = useState("");
 
   // connect to AWS redis
   useEffect(() => {
-    const redis = require("redis");
 
     const redisClient = redis.createClient({
       socket: {

@@ -4,6 +4,7 @@ import Slider from "./Slider";
 import ProductCategory from "./ProductCategory";
 import { homeState, homeReducer } from "./HomeContext";
 import SingleProduct from "./SingleProduct";
+import Promo from "./Promo";
 
 export const HomeContext = createContext();
 
