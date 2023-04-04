@@ -18,10 +18,10 @@ ENV REACT_APP_API_URL=$REACT_APP_API_URL
 # Build the app
 RUN npm run build
 
-# production environment
+# Bundle static assets with nginx
 FROM nginx:stable-alpine as production
 ENV NODE_ENV production
-COPY --from=builder /app/build /usr/share/ngnx/html
+COPY --from=builder /app/build /usr/share/nginx/html
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 

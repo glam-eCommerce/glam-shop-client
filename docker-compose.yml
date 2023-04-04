@@ -13,5 +13,3 @@ services:
     restart: always
     env_file:
       - .env
-
-# testing terraform codepipeline on 4th April 9:23 PM
