@@ -33,7 +33,7 @@ const HomeComponent = () => {
     <Fragment>
       <Slider />
       {/* Promo */}
-      <section className="m-4 md:mx-8 md:my-6">
+      <section className="m-4 md:mx-8 md:my-6" style={{height: "100px", display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: "#b7791f"}}>
         <Promo promo={promo}/>
       </section>
       {/* Category, Search & Filter Section */}
