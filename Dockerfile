@@ -1,6 +1,6 @@
 
 # Use a Node.js 16 base image
-FROM node:16-alpine as build
+FROM node:16-alpine as builder
 
 # Set the working directory to /app inside the container
 WORKDIR /app
@@ -19,8 +19,9 @@ ENV REACT_APP_API_URL=$REACT_APP_API_URL
 RUN npm run build
 
 # production environment
-FROM nginx:stable-alpine
-COPY --from=build /app/build /usr/share/ngnx/html
+FROM nginx:stable-alpine as production
+ENV NODE_ENV production
+COPY --from=builder /app/build /usr/share/ngnx/html
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
