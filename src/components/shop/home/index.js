@@ -19,6 +19,7 @@ const HomeComponent = () => {
     try {
       const response = await axios.get(`${apiURL}/promo`);
       setPromo(response.text());
+      console.log(promo);
     } catch (error) {
       console.log('Error fetching promo', error);
     }
