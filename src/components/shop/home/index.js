@@ -32,10 +32,12 @@ const HomeComponent = () => {
   return (
     <Fragment>
       <Slider />
+      {/* Promo */}
+      <section className="m-4 md:mx-8 md:my-6">
+        <Promo promo={promo}/>
+      </section>
       {/* Category, Search & Filter Section */}
       <section className="m-4 md:mx-8 md:my-6">
-        {/* Promo */}
-        <Promo promo={promo}/>
         <ProductCategory />
       </section>
       {/* Product Section */}

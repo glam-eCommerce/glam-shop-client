@@ -1,9 +1,12 @@
 import React from "react";
-import "./style.css";
 
 const Promo = ({promo}) => {
   
-  return <div class="promo">{promo}</div>;
+  return <div className="mx-0 relative text-center text-2xl font-bold w-100 p-5"
+    style={{height: "30px", 
+      backgroundColor: "#b7791f",
+      color: "#fff",
+    }}>{promo}</div>;
 };
 
 export default Promo;

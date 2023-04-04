@@ -34,7 +34,7 @@ const Slider = (props) => {
               onClick={(e) =>
                 prevSlide(data.sliderImages.length, slide, setSlide)
               }
-              className={`z-10 absolute top-0 left-0 mt-64 flex justify-end items-center box-border flex justify-center w-12 h-12 text-gray-700  cursor-pointer hover:text-yellow-700`}
+              className={`z-10 absolute top-0 left-0 mt-20 flex justify-end items-center box-border flex justify-center w-12 h-12 text-gray-700  cursor-pointer hover:text-yellow-700`}
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -51,7 +51,7 @@ const Slider = (props) => {
               onClick={(e) =>
                 nextSlide(data.sliderImages.length, slide, setSlide)
               }
-              className={`z-10 absolute top-0 right-0 mt-64 flex justify-start items-center box-border flex justify-center w-12 h-12 text-gray-700 cursor-pointer hover:text-yellow-700`}
+              className={`z-10 absolute top-0 right-0 mt-20 flex justify-start items-center box-border flex justify-center w-12 h-12 text-gray-700 cursor-pointer hover:text-yellow-700`}
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
