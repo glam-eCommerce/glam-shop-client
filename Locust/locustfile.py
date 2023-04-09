@@ -5,7 +5,8 @@ class GlamEcom(HttpUser):
 
     @task
     def login(self):
-        response = self.client.post("http://glam-server-production-terraform.eba-djmd22j3.ap-southeast-1.elasticbeanstalk.com/api/signin", {"username": "jeral.ong.2020@scis.smu.edu.sg", "password": "your_password"})
+        response = self.client.post("http://glam-server-production-terraform.eba-djmd22j3.ap-southeast-1.elasticbeanstalk.com/api/signin", 
+                                    {"username": "jeral.ong.2020@scis.smu.edu.sg", "password": "your_password"})
         if response.status_code == 200:
             self.client.get("/dashboard")
         else:
